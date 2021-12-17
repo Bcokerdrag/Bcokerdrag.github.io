@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<title>Final</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">top of page
+  </div>
+</div>
+  
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Molten salt reactor</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">main</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Side</div>
+      </a>
+     
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>coolant</b> <span class="w3-right w3-tag w3-dark-grey w3-round">can use molten salts to cool the reactor</span></h1>
+      <p class="w3-text-grey">Molten salts can be highly corrosive and corrosivity increases with temperature. For the primary cooling loop, a material is needed that can withstand corrosion at high temperatures and intense radiation. Experiments show that Hastelloy-N and similar alloys are suited to these tasks at operating temperatures up to about 700 °C. However, operating experience is limited. Still higher operating temperatures are desirable—at 850 °C thermochemical production of hydrogen becomes possible. Materials for this temperature range have not been validated, though carbon composites, molybdenum alloys (e.g. TZM), carbides, and refractory metal based or ODS alloys might be feasible.</p>
+      <hr>
+   
+      <h1><b>advantages</b> <span class="w3-right w3-tag w3-dark-grey w3-round">no leaks of radioactive steam</span></h1>
+      <p class="w3-text-grey">All low-pressure reactor designs, passive decay heat removal is achieved in MSRs. In some designs, the fuel and the coolant are the same fluid, so a loss of coolant removes the reactor's fuel, similar to how loss of coolant also removes the moderator in LWRs. Unlike steam, fluoride salts dissolve poorly in water, and do not form burnable hydrogen. Unlike steel and solid uranium oxide, molten salts are not damaged by the core's neutron bombardment, though the reactor vessel still is.</p>
+      <hr>
+      
+      <h1><b>disadvantages</b> <span class="w3-right w3-tag w3-dark-grey w3-round">corrosion risk</span></h1>
+      <p class="w3-text-grey">Little development compared to most Gen IV designs.
+In circulating-fuel-salt designs, radionuclides dissolved in fuel come in contact with major equipment such as pumps and heat exchangers, likely requiring fully remote and possibly expensive maintenance.
+Required onsite chemical plant to manage core mixture and remove fission products.
+Also requires regulatory changes to deal with radically different design features</p>
+      <hr>
+
+     
+
+      
+
+      
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Fused salt purification</b>  <span class="w3-right w3-tag w3-dark-grey w3-round">Techniques for preparing and handling molten salt</span></h1>
+      <p class="w3-text-grey">The purpose of salt purification is to eliminate oxides, sulfur and metal impurities. Oxides could result in the deposition of solid particles in reactor operation. Sulfur must be removed because of its corrosive attack on nickel-based alloys at operational temperature</p>
+      <hr>
+   
+      <h1><b>Fuel reprocessing</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Reprocessing refers to chemical separation of uranium and plutonium from spent fuel.</span></h1>
+      <p class="w3-text-grey">Such recovery could increase the risk of nuclear proliferation. In the United States the regulatory regime has varied dramatically across administrations.</p>
+      <hr>
+      
+      
+    </div>
+</div>
+
+
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
